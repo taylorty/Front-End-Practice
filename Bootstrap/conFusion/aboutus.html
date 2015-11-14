@@ -39,7 +39,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html"><span class="glyphicon glyphicon-home"
-                         aria-hidden="true"></spanul> Home</a></li>
+                         aria-hidden="true"></span> Home</a></li>
                     <li class="active"><a href="#"><span class="glyphicon glyphicon-info-sign"
                          aria-hidden="true"></span> About</a></li>
                     <li class="dropdown">
@@ -56,9 +56,7 @@
                             <li><a href="#">Weekend Brunch</a></li>
                         </ul>
                      </li>
-                <li><a href="contactus.html"><span class="glyphicon glyphicon-envelope"
-                         aria-hidden="true"></span> Contact</a></li>
-                </ul>
+                <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
             </div>
         </div>
     </nav>
@@ -78,9 +76,12 @@
                    <img src="img/logo.png" class="img-responsive">
                   </div>
                   <div class="col-xs-12 col-sm-2">
-                    <p style="padding:45px;"></p>
-                  <button type="info" class="btn btn-warning">Reserve Table</button>
-                 </div>
+                   <p style="padding:40px;"></p>
+                   <a type="button" class="btn btn-warning btn-block"
+                    data-toggle="tooltip" title="Or Call us at +852 12345678"
+                     data-placement="bottom" href="#reserveform">
+                   Reserve Table</a>
+                </div>
             </div>
         </div>
     </header>
@@ -344,6 +345,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
 </body>
 
 </html>

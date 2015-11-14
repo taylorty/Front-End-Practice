@@ -72,3 +72,10 @@ body{
 .affix {
     top:100px;
 }
+
+.btn{
+    white-space:normal !important;
+    max-width:200px;
+}
+
+
