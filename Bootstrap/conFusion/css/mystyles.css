@@ -19,7 +19,7 @@
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
-    background: #7986CB ;
+    background: #375a7f ;
     color:floralwhite;
 }
 
@@ -35,26 +35,26 @@ body{
 }
 
 .navbar-inverse {
-     background: #303F9F;
+     background: #375a7f;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background: #1A237E;
+    background: #375a7f;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
  .navbar-inverse .navbar-nav > .open > a:hover,
  .navbar-inverse .navbar-nav > .open > a:focus {
     color: #fff;
-    background: #1A237E;
+    background: #375a7f;
 }
 
 .navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
 .navbar-inverse .navbar-nav .open .dropdown-menu {
-    background-color: #303F9F;
+    background-color: #375a7f;
     color:#eeeeee;
 }
 
@@ -80,7 +80,7 @@ body{
 
 
 .carousel {
-    background:#1A237E;
+    background:#375a7f;
 }
 .carousel .item {
   height: 300px;
