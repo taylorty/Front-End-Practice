@@ -66,7 +66,6 @@
                 <span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
             </ul>
-            
             </div>
         </div>
     </nav>
@@ -103,8 +102,10 @@
         </div>
         </div>
     </div>
+    
+    
 
-
+    
     <header class="jumbotron">
 
         <!-- Main component for a primary marketing message or call to action -->
@@ -123,13 +124,109 @@
                  <div class="col-xs-12 col-sm-2">
                    <p style="padding:40px;"></p>
                    <a type="button" class="btn btn-warning btn-block"
-                    data-toggle="tooltip" title="Or Call us at +852 12345678"
-                     data-placement="bottom" href="#reserveform">
+                    data-toggle="modal" data-placement="bottom" href="#reserveModal">
                    Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Reserve Table </h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline">
+              <div class="row">
+              <div class="form-group">
+                <label for="numofguests" class="col-sm-2 control-label">Number of Guests</label>
+                <div class="col-sm-10 form-inline" id="numofguests">
+                <div class="row">
+                    <div class="col-lg-12 col-lg-offset-1">
+                <label class="radio-inline"><input type="radio" name="numguests1">1</label>
+                <label class="radio-inline"><input type="radio" name="numguests2">2</label>
+                <label class="radio-inline"><input type="radio" name="numguests3">3</label>
+                <label class="radio-inline"><input type="radio" name="numguests4">4</label>
+                <label class="radio-inline"><input type="radio" name="numguests5">5</label>
+                <label class="radio-inline"><input type="radio" name="numguests6">6</label>
+                    </div>
+                </div>
+                </div>
+              </div>
+              </div>
+
+              <p style="padding:5px;"></p>
+
+              <div class="row">
+                <div class="form-group">
+                  <label for="section" class="col-sm-2 control-label">Section</label>
+                <div class="col-sm-10 form-inline" id="section">
+                <div class="row">
+                    <div class="col-lg-12 col-lg-offset-3">
+                      <button type="bottom" role="group" class="btn btn-success btn-sm">Non-smoking</button>
+                      <button type="button" role="group" class="btn btn-danger btn-sm">Smoking</button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p style="padding:5px;"></p>
+
+              <div class="row">
+                <div class="form-group">
+                    <label for="datetime" class="col-sm-2 control-label">Date and Time</label>
+                    <div class="col-sm-10 form-inline" id="datetime">
+                      <div class="row">
+                      <div class="col-sm-4">
+                        <div class="form-group has-feedback">
+                          <label class="control-label sr-only" for"date">Date</label>
+                          <input type="text" class="form-control" id="date" placeholder="Date" aria-describedby="gl_date">
+                          <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                          <span id="gl_date" class="sr-only">(date)</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 col-sm-offset-1">
+                        <div class="form-group has-feedback">
+                          <label class="control-label sr-only" for"time">Time</label>
+                          <input type="text" class="form-control" id="date" placeholder="Time" aria-describedby="gl_time">
+                           <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
+                          <span id="gl_time" class="sr-only">(time)</span>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <p style="padding:5px;"></p>
+                  <div class="col-lg-12 col-sm-12 col-lg-offset-8">
+                    <div class="btn-group" role="group">
+                      <button type="bottom" role="group" class="btn btn-primary btn-sm">Reserve</button>
+                      <button type="button" role="group" class="btn btn-default btn-sm"
+                data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <p style="padding:5px;"></p>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <strong>Warning!</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
+            </div>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -173,6 +270,14 @@
                         <p><a href="#" class="btn btn-primary btn-xs">More &raquo;</a></p>
                         </div>
                     </div>
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-xs" id="carousel-pause">
+                          <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger btn-xs" id="carousel-play">
+                          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    </button>
+                </div>
                 </div>
                 <!-- Controls -->
                 <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
@@ -184,12 +289,12 @@
                         <span class="sr-only">Next</span>
                     </a>
             </div>
+          </div>
+        </div>
+         
 
-              </div>
-         </div>
 
-
-
+          <div class="row row-content">
             <div class="col-xs-12 col-sm-3 col-sm-push-9">
                 <p style="padding:20px;"></p>
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
@@ -268,7 +373,7 @@
 
         
 
-		<div class="row row-content">
+		<div class="row row-content" id = "reserveform">
 			<div class="col-xs-12 col-sm-3">
 			<h3>Reserve a Table</h3>
 			</div>
@@ -315,12 +420,11 @@
 				</div>
 			<div class="row">
 				<div class="form-group">
-                    <p style="padding:5px;"></p>
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Reserve</button>
-                    </div>
-
-                </div>
+          <p style="padding:5px;"></p>
+          <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Reserve</button>
+          </div>
+        </div>
 			</div>
 
       <p style="padding:5px;"></p>
@@ -386,9 +490,22 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+                          $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+                        $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
+    <!---
+    <script>
+        $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
          });
     </script>
+    -->
 </body>
 
 </html>
