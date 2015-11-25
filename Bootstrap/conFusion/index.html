@@ -16,6 +16,12 @@
     <link href="css/mystyles.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
+<!--    <link href="http://code.jquery.com/ui/1.10.4/themes/blitzer/jquery-ui.css" rel="stylesheet">-->
+
+    <!-- jQuery -->
+    <link href="http://code.jquery.com/ui/1.11.3/themes/cupertino/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -401,7 +407,8 @@
 						<div class="col-sm-4">
 							<div class="form-group has-feedback">
 								<label class="control-label sr-only" for"date">Date</label>
-								<input type="text" class="form-control" id="date" placeholder="Date" aria-describedby="gl_date">
+<!--								<input type="text" class="form-control" id="date" placeholder="Date" aria-describedby="gl_date">-->
+                                <input type="text" class="form-control" id="datepicker" placeholder="Date" aria-describedby="gl_date">
 								<span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
 								<span id="gl_date" class="sr-only">(date)</span>
 							</div>
@@ -485,7 +492,7 @@
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script>
@@ -499,6 +506,11 @@
             });
         });
     </script>
+    <script>
+         $(function() {
+            $( "#datepicker" ).datepicker();
+         });
+      </script>
     <!---
     <script>
         $(document).ready(function(){
