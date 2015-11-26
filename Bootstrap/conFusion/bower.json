@@ -1,0 +1,30 @@
+{
+  "name": "conFusion",
+  "homepage": "https://github.com/taylorty/Front-End-Practice",
+  "authors": [
+    "Tongyu Yang"
+  ],
+  "description": "Website for an awesome restaurant",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
