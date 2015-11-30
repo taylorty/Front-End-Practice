@@ -1,1 +1,3 @@
-This is a repository for front-end practice. The practice contains Bootstrap, Meteor.js and AngularJS.
+##This is a repository for front-end practice. 
+
+The practice includes [Bootstrp](http://getbootstrap.com/), [Meteor.js](https://www.meteor.com/) and [AngularJS](https://angularjs.org/).
