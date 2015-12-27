@@ -18,7 +18,7 @@ angular.module('confusionApp')
         $scope.channels = channels;
         $scope.invalidChannelSelection = false;
     }])
-    .controller('DishDetailController', ['$scope', function($scope, menuFactory) {
+    .controller('DishDetailController', ['$scope', 'menuFactory', function($scope, menuFactory) {
         $scope.dish= menuFactory.getDish(3);
 
     }])
@@ -27,10 +27,10 @@ angular.module('confusionApp')
         $scope.submitComment = function() {
             $scope.mycomment.date = new Date();
             console.log($scope.mycomment);
-            $scope.dish.comment.push($scope.comment);
+            $scope.dish.comments.push($scope.mycomment);
             $scope.commentForm.$setPristine();
             $scope.mycomment = {rating:5, comment:"", author:"", date:""};
-        }
+        };
 
     }])
     .controller('FeedbackController', ['$scope', function($scope) {
