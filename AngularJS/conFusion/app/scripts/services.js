@@ -135,6 +135,7 @@ angular.module('confusionApp')
                 date: "2011-12-02T17:57:28.556094Z"
             }]
         }];
+
         this.getDishes = function() {
             return dishes;
         };
