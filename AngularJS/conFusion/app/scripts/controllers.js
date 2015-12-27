@@ -18,18 +18,30 @@ angular.module('confusionApp')
         $scope.channels = channels;
         $scope.invalidChannelSelection = false;
     }])
-    .controller('DishDetailController', ['$scope', 'menuFactory', function($scope, menuFactory) {
-        $scope.dish= menuFactory.getDish(3);
-
+    
+    .controller('DishDetailController', ['$scope', '$routeParams', 'menuFactory', function($scope, $routeParams, menuFactory) {
+        var dish = menuFactory.getDish(parseInt($routeParams.id, 10));
+        $scope.dish = dish;
     }])
+
     .controller('DishCommentController', ['$scope', function($scope) {
-        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+        $scope.mycomment = {
+            rating: 5,
+            comment: "",
+            author: "",
+            date: ""
+        };
         $scope.submitComment = function() {
             $scope.mycomment.date = new Date();
             console.log($scope.mycomment);
             $scope.dish.comments.push($scope.mycomment);
             $scope.commentForm.$setPristine();
-            $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+            $scope.mycomment = {
+                rating: 5,
+                comment: "",
+                author: "",
+                date: ""
+            };
         };
 
     }])
@@ -59,7 +71,7 @@ angular.module('confusionApp')
         $scope.tab = 1;
         $scope.filtText = '';
         $scope.showDetails = false;
-        $scope.dishes= menuFactory.getDishes();
+        $scope.dishes = menuFactory.getDishes();
 
         $scope.select = function(setTab) {
             $scope.tab = setTab;
@@ -79,5 +91,4 @@ angular.module('confusionApp')
         $scope.toggleDetails = function() {
             $scope.showDetails = !$scope.showDetails;
         };
-}]);
-
+    }]);
