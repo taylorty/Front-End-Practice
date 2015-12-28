@@ -6,6 +6,9 @@
         <div class="row row-content" ng-controller="DishDetailController">
             <div class="col-xs-12">
                 <ul class="media-list">
+                    <button class="btn btn-xs btn-primary pull-right" type="button" ui-sref="app.menu">
+                        Back to Menu
+                    </button>
                     <li class="media">
                         <div class="media-left media-middle">
                             <a href="#">
@@ -44,12 +47,12 @@
                             </footer>
                         </blockquote>
                         <ul class="list-unstyled">
-                    <blockquote ng-show="commentForm.$valid">
-                        <p>{{mycomment.rating}} Stars</p>
-                        <p>{{mycomment.comment}}</p>
-                        <footer>{{mycomment.author}},</footer>
-                    </blockquote>
-                    </ul>
+                            <blockquote ng-show="commentForm.$valid">
+                                <p>{{mycomment.rating}} Stars</p>
+                                <p>{{mycomment.comment}}</p>
+                                <footer>{{mycomment.author}},</footer>
+                            </blockquote>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -66,19 +69,19 @@
                         <label for="rating" class="col-sm-2 control-label">Stars</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">
-                                <input type="radio" id="rating_1" name="rating" ng-model="mycomment.rating" value="1"/>1
+                                <input type="radio" id="rating_1" name="rating" ng-model="mycomment.rating" value="1" />1
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" id="rating_2" name="rating" ng-model="mycomment.rating" value="2"/>2
+                                <input type="radio" id="rating_2" name="rating" ng-model="mycomment.rating" value="2" />2
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" id="rating_3" name="rating" ng-model="mycomment.rating" value="3"/>3
+                                <input type="radio" id="rating_3" name="rating" ng-model="mycomment.rating" value="3" />3
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" id="rating_4" name="rating" ng-model="mycomment.rating" value="4"/>4
+                                <input type="radio" id="rating_4" name="rating" ng-model="mycomment.rating" value="4" />4
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" id="rating_5" name="rating" ng-model="mycomment.rating" value="5" ng-checked="true"/>5
+                                <input type="radio" id="rating_5" name="rating" ng-model="mycomment.rating" value="5" ng-checked="true" />5
                             </label>
                         </div>
                     </div>
