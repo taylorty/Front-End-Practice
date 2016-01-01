@@ -12,14 +12,17 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     rev = require('gulp-rev'),
     browserSync = require('browser-sync'),
+    ngannotate = require('gulp-ng-annotate');
     del = require('del');
-ngannotate = require('gulp-ng-annotate');
-
 
 gulp.task('jshint', function() {
     return gulp.src('app/scripts/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
+});
+
+gulp.task('clear', function(done) {
+    return cache.clearAll(done);
 });
 
 // Clean
@@ -28,12 +31,12 @@ gulp.task('clean', function() {
 });
 
 // Default task
-gulp.task('default', ['clean'], function() {
-    gulp.start('usemin', 'imagemin', 'copyfonts');
+gulp.task('default', ['clear', 'clean'], function() {
+    gulp.start('usemin', 'imagemin', 'copyfonts', 'copyhtmls');
 });
 
 gulp.task('usemin', ['jshint'], function() {
-    return gulp.src('./app/**/*.html')
+    return gulp.src('./app/index.html')
         .pipe(usemin({
             css: [minifycss(), rev()],
             js: [ngannotate(), uglify(), rev()]
@@ -55,6 +58,12 @@ gulp.task('imagemin', function() {
         }));
 });
 
+gulp.task('copyhtmls', ['clean'], function() {
+    //  gulp.src(['app/views/menu.html', 'app/views/contactus.html', 'app/views/dishdetail.html'])
+    gulp.src('app/views/*.html')
+        .pipe(gulp.dest('./dist/views'));
+});
+
 gulp.task('copyfonts', ['clean'], function() {
     gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
         .pipe(gulp.dest('./dist/fonts'));
@@ -62,11 +71,10 @@ gulp.task('copyfonts', ['clean'], function() {
         .pipe(gulp.dest('./dist/fonts'));
 });
 
-
 // Watch
 gulp.task('watch', ['browser-sync'], function() {
     // Watch .js files
-    gulp.watch('{app/scripts/**/*.js,app/styles/**/*.css,app/**/*.html}', ['usemin']);
+    gulp.watch('{app/scripts/**/*.js,app/styles/**/*.css,app/**/*.html}', ['usemin', 'copyhtmls']);
     // Watch image files
     gulp.watch('app/images/**/*', ['imagemin']);
 
