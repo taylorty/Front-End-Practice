@@ -131,7 +131,7 @@ angular.module('confusionApp')
             author: "",
             date: ""
         };
-    }
+    };
 }])
 
 .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
