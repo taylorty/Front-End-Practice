@@ -10,9 +10,9 @@ Got to fully learn about Bootstrap and responsive web page design.
 See [course](https://www.coursera.org/learn/web-frameworks) offered by The Hong Kong University of Science and Technology on [Coursera](https://www.coursera.org/).
 
 ### Front-End JavaScript Frameworks: AngularJS
-Became familiar with client-side JavaScript frameworks and MVC design pattern.
-Learned about how to use various AngularJS features including directives, filters, controllers, scope and routing.
-Implemented a functional front-end web application called ConFusion using AngularJS.
+Became familiar with client-side JavaScript frameworks and MVC design pattern.  
+Learned about how to use various AngularJS features including directives, filters, controllers, scope and routing.  
+Implemented a functional front-end web application called ConFusion using AngularJS.  
 
 See [course](https://www.coursera.org/learn/angular-js) offered by The Hong Kong University of Science and Technology on [Coursera](https://www.coursera.org/).
 
